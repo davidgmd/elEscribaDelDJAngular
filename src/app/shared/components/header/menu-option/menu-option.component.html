@@ -1,4 +1,9 @@
-<button mat-flat-button color="primary" class="imagen" (mouseenter)="reproducirSonido()">
-  <span class="imagen-texto">{{ texto }}</span>
+<button
+  mat-flat-button
+  color="primary"
+  class="imagen"
+  (mouseenter)="reproducirSonido()"
+>
+  <span class="imagen-texto">{{ texto | translate }}</span>
   <mat-icon class="imagen-icono">{{ icono }}</mat-icon>
 </button>

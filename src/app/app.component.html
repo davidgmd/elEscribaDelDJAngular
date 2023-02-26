@@ -1,2 +1,11 @@
 <app-header></app-header>
-<router-outlet></router-outlet>
+<div class="contenido__central">
+  <div class="contenido__central-image">
+    <img
+      src="../assets/img/logo2.png"
+      alt="{{ 'page.background_image_alt' | translate }}"
+    />
+  </div>
+  <router-outlet></router-outlet>
+</div>
+<app-footer class="contenido-pie"></app-footer>

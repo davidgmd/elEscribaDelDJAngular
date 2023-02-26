@@ -1,17 +1,28 @@
 <!-- Cabecera de la pagina -->
 <header class="header">
-  <h1 class="header-titulo">Perdido en la Entropia, D.P.S.</h1>
+  <h1 class="header-titulo">{{ "page.title" | translate }}</h1>
   <nav class="header__nav">
-      <div class="header__nav__home">
-          <button mat-fab class="header__nav__home__button" color="primary" (mouseenter)="reproducirSonido()" (click)="volverInicio()">
-              <mat-icon>home</mat-icon>
-          </button>
-      </div>
+    <div class="header__nav__home">
+      <button
+        mat-fab
+        class="header__nav__home__button"
+        color="primary"
+        (mouseenter)="reproducirSonido()"
+        (click)="volverInicio()"
+      >
+        <mat-icon>home</mat-icon>
+      </button>
+    </div>
 
-      <ul class="header__nav__menu">
-          <li class="header__nav__menu__item">
-            <app-menu-option class="header__nav__menu__item-position" *ngFor="let menu of opcionesMenu" [texto]="menu.texto" [icono]="menu.icono"></app-menu-option>
-          </li>
-      </ul>
+    <ul class="header__nav__menu">
+      <li class="header__nav__menu__item">
+        <app-menu-option
+          class="header__nav__menu__item-position"
+          *ngFor="let menu of opcionesMenu"
+          [texto]="menu.texto"
+          [icono]="menu.icono"
+        ></app-menu-option>
+      </li>
+    </ul>
   </nav>
 </header>

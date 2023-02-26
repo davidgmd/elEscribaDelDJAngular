@@ -1,0 +1,31 @@
+<footer class="footer">
+  <div class="footer__col_izq">
+    <!-- Autor -->
+    <section class="footer__autor footer__divider">
+      <h1 class="footer__autor-titulo">
+        {{ "page.footer.author" | translate }}
+      </h1>
+    </section>
+
+    <!-- apartado red social  -->
+    <section class="footer__section__redes_sociales footer__divider">
+      <span class="footer__section__redes_sociales-titulo">{{
+        "page.footer.social.header" | translate
+      }}</span>
+      <ul class="footer__redes_sociales">
+        <app-red-social
+          *ngFor="let red_social of redes_sociales"
+          [icon]="red_social.icon"
+          [texto]="red_social.texto"
+          [link]="red_social.link"
+        ></app-red-social>
+      </ul>
+    </section>
+  </div>
+  <!-- Copyright/licencia -->
+  <section class="footer__col_der">
+    <span class="footer__col_der-licencia">{{
+      "page.footer.license" | translate
+    }}</span>
+  </section>
+</footer>

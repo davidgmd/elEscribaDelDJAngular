@@ -1,0 +1,12 @@
+{
+  "page": {
+    "background_image_alt": "Fondo del contenido central con un tintero, una pantalla de narrador y un dado",
+    "title":"The Master's Scribe",
+    "menu":{
+      "scribe":"The master scribe",
+      "oceano_rolero": "JuanmaVerse",
+      "others": "Others",
+      "minigames": "Mini Games"
+    }
+  }
+}

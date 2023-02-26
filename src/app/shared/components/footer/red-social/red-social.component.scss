@@ -1,0 +1,18 @@
+.footer__red_social {
+  display: flex;
+  align-items: center;
+  margin-right: 5px;
+
+  &:hover {
+    text-shadow: 1px -1px 4px black;
+  }
+
+  &-icon {
+    min-width: 30px;
+  }
+
+  &-link {
+    color: white;
+    font-weight: 100;
+  }
+}

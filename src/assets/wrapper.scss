@@ -1,0 +1,22 @@
+.contenido__central {
+  flex-grow: 1;
+  height: 100%;
+  padding: 1%;
+  background-color: rgba(65, 105, 225, 0.8);
+  color: thistle;
+  text-shadow: 1px 3px 3px black;
+  font-size: 20px;
+  position: relative;
+
+  &-image {
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.4;
+    margin-left: -40px;
+    position: absolute;
+  }
+}

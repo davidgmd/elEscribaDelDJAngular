@@ -11,10 +11,10 @@ export class ConfigService {
     return {
       idioma: 'es',
       menu: [
-        { texto: 'elescriba', icono: 'history_edu' },
-        { texto: 'juanmaverso', icono: 'library_books' },
-        { texto: 'otros', icono: 'dynamic_feed' },
-        { texto: 'minijuegos', icono: 'sports_esports' },
+        { texto: 'page.menu.scribe', icono: 'history_edu' },
+        { texto: 'page.menu.oceano_rolero', icono: 'library_books' },
+        { texto: 'page.menu.others', icono: 'dynamic_feed' },
+        { texto: 'page.menu.minigames', icono: 'sports_esports' },
       ],
     };
   }
