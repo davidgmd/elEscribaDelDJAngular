@@ -1,12 +1,22 @@
 {
   "page": {
     "background_image_alt": "Fondo del contenido central con un tintero, una pantalla de narrador y un dado",
-    "title":"The Master's Scribe",
-    "menu":{
-      "scribe":"The master scribe",
+    "title": "The Master's Scribe",
+    "menu": {
+      "scribe": "The master scribe",
       "oceano_rolero": "JuanmaVerse",
       "others": "Others",
       "minigames": "Mini Games"
+    },
+    "footer": {
+      "author": "Author D.P.S.",
+      "social": {
+        "header": "Social Network and Mail",
+        "twitter": "David_Keen",
+        "facebook": "Facebook Profile",
+        "mail": "Mail"
+      },
+      "license": "All rights related to the web layout, design and how it works, correspond to me, neither the rights of the channel of @oceanorolero nor other materials"
     }
   }
 }

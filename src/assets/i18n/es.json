@@ -3,20 +3,20 @@
     "background_image_alt": "Fondo del contenido central con un tintero, una pantalla de narrador y un dado",
     "title": "El escriba del DJ",
     "menu": {
-      "scribe": "el escriba del dj",
+      "scribe": "El escriba del dj",
       "oceano_rolero": "JuanmaVerso",
       "others": "Otros",
       "minigames": "Mini Juegos"
     },
     "footer": {
-      "author": "Autor D.P.S.",
+      "author": "Created by D.P.S.",
       "social": {
         "header": "Redes sociales y correo",
         "twitter": "David_Keen",
         "facebook": "Perfil de Facebook",
         "mail": "Correo"
       },
-      "license": "Los derechos relativos a la maquetación, diseño y funcionalidad de la pagina, me corresponden a mi, no así los derechos de la imagen de fondo, ni los del canal y otros materiales de @oceanorrolero"
+      "license": "Los derechos relativos a la maquetación, diseño y funcionalidad de la pagina, me corresponden a mi, ni los del canal y otros materiales de @oceanorrolero"
     }
   }
 }

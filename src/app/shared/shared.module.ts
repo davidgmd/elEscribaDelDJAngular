@@ -6,8 +6,9 @@ import { MenuOptionComponent } from './components/header/menu-option/menu-option
 import { FooterComponent } from './layout/footer/footer.component';
 import { RedSocialComponent } from './components/footer/red-social/red-social.component';
 import { TranslateModule } from '@ngx-translate/core';
+import { InitialDialogComponent } from './components/dialog/initial-dialog/initial-dialog.component';
 
-const sharedComponents = [HeaderComponent, MenuOptionComponent, FooterComponent, RedSocialComponent];
+const sharedComponents = [HeaderComponent, MenuOptionComponent, FooterComponent, RedSocialComponent, InitialDialogComponent];
 
 @NgModule({
   declarations: [sharedComponents],
