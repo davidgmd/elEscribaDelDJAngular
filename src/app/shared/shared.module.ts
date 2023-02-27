@@ -7,11 +7,12 @@ import { FooterComponent } from './layout/footer/footer.component';
 import { RedSocialComponent } from './components/footer/red-social/red-social.component';
 import { TranslateModule } from '@ngx-translate/core';
 import { InitialDialogComponent } from './components/dialog/initial-dialog/initial-dialog.component';
+import { LanguageComponent } from './components/header/language/language.component';
 
-const sharedComponents = [HeaderComponent, MenuOptionComponent, FooterComponent, RedSocialComponent, InitialDialogComponent];
+const sharedComponents = [HeaderComponent, MenuOptionComponent, FooterComponent, RedSocialComponent, InitialDialogComponent, LanguageComponent];
 
 @NgModule({
-  declarations: [sharedComponents],
+  declarations: [sharedComponents ],
   imports: [CommonModule, MaterialModule, TranslateModule],
   exports: [sharedComponents, TranslateModule],
 })

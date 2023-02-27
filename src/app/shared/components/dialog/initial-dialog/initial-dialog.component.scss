@@ -1,0 +1,20 @@
+.dialog {
+  margin: 10px;
+
+  &__description {
+    &-text {
+      width: 400px;
+    }
+
+    &-icons {
+      display: flex;
+      align-items: center;
+      padding-bottom: 10px;
+    }
+  }
+
+  &__actions {
+    display: flex;
+    justify-content: space-evenly;
+  }
+}

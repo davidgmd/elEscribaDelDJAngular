@@ -1,6 +1,19 @@
 <!-- Cabecera de la pagina -->
 <header class="header">
-  <h1 class="header-titulo">{{ "page.title" | translate }}</h1>
+  <section class="header__inicio">
+    <button class="header__inicio__sonido" (click)="activarODesactivarSonido()">
+      <mat-icon class="header__inicio__sonido-icono">{{ icono }}</mat-icon>
+    </button>
+    <h1 class="header__inicio-titulo">{{ "page.title" | translate }}</h1>
+    <section class="header__inicio__idiomas">
+      <app-language
+        *ngFor="let idioma of idiomas"
+        [texto]="idioma.texto"
+        [bandera]="idioma.img"
+        [idioma]="idioma.idioma"
+      ></app-language>
+    </section>
+  </section>
   <nav class="header__nav">
     <div class="header__nav__home">
       <button

@@ -1,0 +1,8 @@
+<button class="idioma" (click)="cambiarIdioma(idioma)">
+  <img
+    class="idioma-bandera"
+    src="{{ '/assets/img/' + bandera }}"
+    alt="{{ texto | translate }}"
+  />
+  <span class="idioma-texto">{{ texto | translate }}</span>
+</button>

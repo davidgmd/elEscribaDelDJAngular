@@ -9,7 +9,7 @@
       "minigames": "Mini Juegos"
     },
     "footer": {
-      "author": "Created by D.P.S.",
+      "author": "Autor D.P.S.",
       "social": {
         "header": "Redes sociales y correo",
         "twitter": "David_Keen",
@@ -18,5 +18,7 @@
       },
       "license": "Los derechos relativos a la maquetación, diseño y funcionalidad de la pagina, me corresponden a mi, ni los del canal y otros materiales de @oceanorrolero"
     }
-  }
+  },
+  "spanish": "español",
+  "english": "ingles"
 }

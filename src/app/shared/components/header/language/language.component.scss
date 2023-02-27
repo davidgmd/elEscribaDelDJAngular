@@ -1,0 +1,11 @@
+.idioma {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: transparent;
+  border: none;
+
+  &-bandera {
+    width: 40px;
+  }
+}

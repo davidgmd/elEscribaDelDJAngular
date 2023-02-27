@@ -1,1 +1,28 @@
-<p>initial-dialog works!</p>
+<div class="dialog">
+  <section class="dialog__header">
+    <h1>Bienvenido visitante, antes de nada:</h1>
+  </section>
+  <section class="dialog__description">
+    <p class="dialog__description-text">
+      Esta pagina usa diferentes sonidos para mejorar la experiencia, ¿deseas
+      que esten activados?, si cambias de parecer puedes desactivarlos con el
+      botón de la cabecera
+    </p>
+    <div class="dialog__description-icons">
+      <span>Para Activar</span>
+      <mat-icon>volume_up</mat-icon>
+      <span>Para desactivar</span>
+      <mat-icon>volume_off</mat-icon>
+    </div>
+  </section>
+  <section class="dialog__actions">
+    <button mat-flat-button color="primary" (click)="cerrarDialog(true)">
+      <span>Si</span>
+      <mat-icon>check</mat-icon>
+    </button>
+    <button mat-flat-button color="accent" (click)="cerrarDialog(false)">
+      <span>No</span>
+      <mat-icon>close</mat-icon>
+    </button>
+  </section>
+</div>

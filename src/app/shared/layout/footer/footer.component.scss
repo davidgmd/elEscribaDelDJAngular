@@ -17,13 +17,18 @@
     margin-left: 5px;
   }
 
-  &__autor-titulo {
-    font-weight: 400;
-    text-decoration: underline;
-    height: 100%;
-    margin: 0px;
-    align-items: center;
+  &__autor {
     display: flex;
+    justify-content: center;
+
+    &-titulo {
+      font-weight: 400;
+      text-decoration: underline;
+      height: 100%;
+      margin: 0px;
+      align-items: center;
+      display: flex;
+    }
   }
 
   &__section__redes_sociales {
