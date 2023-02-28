@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { Subscription } from 'rxjs';
 import { ConfigService } from 'src/app/core/services/config.service';
 import { OpcionesMenu } from '../../models/configInterface';
 import { LanguageInterface } from '../../models/languageInterface';
@@ -14,25 +15,25 @@ enum SoundIcon {
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss'],
 })
-export class HeaderComponent implements OnInit {
+export class HeaderComponent implements OnInit, OnDestroy {
   opcionesMenu = new Array<OpcionesMenu>();
   idiomas = new Array<LanguageInterface>();
   sonidoDesactivado = true;
   icono = 'volume_off';
 
+  subscripcion!: Subscription;
+
   constructor(
-    private readonly obtenerParams: ActivatedRoute,
     private readonly config: ConfigService,
     private readonly navegar: Router
   ) {}
   ngOnInit(): void {
-    this.obtenerParams.params.subscribe((params) => {
-      this.opcionesMenu = this.config.getConfig().menu;
-      this.idiomas = this.config.getConfig().idiomas;
-      this.config.getConfig().sonido.subscribe((valor) => {
-        this.sonidoDesactivado = valor;
-        this.activarODesactivarSonido();
-      });
+    this.opcionesMenu = this.config.getMenu();
+    this.idiomas = this.config.getListaIdiomas();
+
+    this.subscripcion = this.config.getSonido().subscribe((valor) => {
+      this.sonidoDesactivado = valor;
+      this.activarODesactivarSonido();
     });
   }
 
@@ -53,5 +54,9 @@ export class HeaderComponent implements OnInit {
 
   reproducirSonido() {
     console.log('sonido');
+  }
+
+  ngOnDestroy(): void {
+    this.subscripcion.unsubscribe();
   }
 }

@@ -3,6 +3,8 @@
   color="primary"
   class="imagen"
   (mouseenter)="reproducirSonido()"
+  [ngClass]="activo === ruta ? 'imagen--subrayada' : 'imagen'"
+  (click)="navigateTo(ruta)"
 >
   <span class="imagen-texto">{{ texto | translate }}</span>
   <mat-icon class="imagen-icono">{{ icono }}</mat-icon>

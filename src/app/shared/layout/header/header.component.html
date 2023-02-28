@@ -28,12 +28,12 @@
     </div>
 
     <ul class="header__nav__menu">
-      <li class="header__nav__menu__item">
+      <li class="header__nav__menu__item" *ngFor="let menu of opcionesMenu">
         <app-menu-option
           class="header__nav__menu__item-position"
-          *ngFor="let menu of opcionesMenu"
           [texto]="menu.texto"
           [icono]="menu.icono"
+          [ruta]="menu.ruta"
         ></app-menu-option>
       </li>
     </ul>

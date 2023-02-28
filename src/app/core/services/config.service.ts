@@ -1,6 +1,12 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
-import { ConfigInterface } from 'src/app/shared/models/configInterface';
+import { defaultLanguages } from 'src/app/const/defaultLanguages';
+import { defaultMenuOptions } from 'src/app/const/defaultMenuOptions';
+import {
+  ConfigInterface,
+  OpcionesMenu,
+} from 'src/app/shared/models/configInterface';
+import { LanguageInterface } from 'src/app/shared/models/languageInterface';
 
 @Injectable({
   providedIn: 'root',
@@ -9,25 +15,25 @@ export class ConfigService {
   constructor() {}
   configInicial = {
     idioma: 'es',
-    menu: [
-      { texto: 'page.menu.scribe', icono: 'history_edu' },
-      { texto: 'page.menu.oceano_rolero', icono: 'library_books' },
-      { texto: 'page.menu.others', icono: 'dynamic_feed' },
-      { texto: 'page.menu.minigames', icono: 'sports_esports' },
-    ],
-    idiomas: [
-      {
-        texto: 'spanish',
-        img: 'spanish.png',
-        idioma: 'es',
-      },
-      { texto: 'english', img: 'english.png', idioma: 'en' },
-    ],
+    menu: defaultMenuOptions,
     sonido: new BehaviorSubject(false),
+    idiomas: defaultLanguages,
   };
 
-  getConfig(): ConfigInterface {
-    return this.configInicial;
+  getIdiomaActual(): string {
+    return this.configInicial.idioma;
+  }
+
+  getSonido(): BehaviorSubject<boolean> {
+    return this.configInicial.sonido;
+  }
+
+  getMenu(): Array<OpcionesMenu> {
+    return this.configInicial.menu;
+  }
+
+  getListaIdiomas(): Array<LanguageInterface> {
+    return this.configInicial.idiomas;
   }
 
   setIdioma(value: string): void {

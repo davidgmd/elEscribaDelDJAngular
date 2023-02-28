@@ -2,8 +2,9 @@ import { BehaviorSubject } from 'rxjs';
 import { LanguageInterface } from './languageInterface';
 
 export class OpcionesMenu {
-  texto: string = '';
-  icono: string = '';
+  texto = '';
+  icono = '';
+  ruta = '';
 }
 
 export interface ConfigInterface {
