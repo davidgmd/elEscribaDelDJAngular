@@ -5,6 +5,7 @@ export class OpcionesMenu {
   texto = '';
   icono = '';
   ruta = '';
+  audio = '';
 }
 
 export interface ConfigInterface {

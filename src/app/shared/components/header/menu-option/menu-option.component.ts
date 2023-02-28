@@ -2,6 +2,7 @@ import { Component, Input, OnDestroy, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { RutaService } from 'src/app/core/services/ruta.service';
+import { SoundService } from 'src/app/core/services/sound.service';
 
 @Component({
   selector: 'app-menu-option',
@@ -12,13 +13,15 @@ export class MenuOptionComponent implements OnInit, OnDestroy {
   @Input() texto = '';
   @Input() icono = '';
   @Input() ruta = '';
+  @Input() audio = '';
 
   activo = '';
   subscripcion!: Subscription;
 
   constructor(
     private readonly navegador: Router,
-    private readonly obsActivo: RutaService
+    private readonly obsActivo: RutaService,
+    private readonly sonido: SoundService
   ) {}
 
   ngOnInit() {
@@ -27,8 +30,8 @@ export class MenuOptionComponent implements OnInit, OnDestroy {
     });
   }
 
-  reproducirSonido(): void {
-    console.log('sonido menu');
+  reproducirSonido(audio: string): void {
+    this.sonido.sonidoDing();
   }
 
   navigateTo(ruta: string) {

@@ -15,15 +15,19 @@ export class DashboardHomeComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.dialog
-      .open(InitialDialogComponent)
-      .afterClosed()
-      .subscribe((comprobacion) => {
-        if (comprobacion) {
-          this.config.setSonido(comprobacion);
-        } else {
-          this.config.setSonido(false);
-        }
-      });
+    if (localStorage.getItem('aceptado') !== 'true') {
+      this.dialog
+        .open(InitialDialogComponent)
+        .afterClosed()
+        .subscribe((comprobacion) => {
+          if (comprobacion) {
+            this.config.setSonido(comprobacion);
+          } else {
+            this.config.setSonido(false);
+          }
+
+          localStorage.setItem('aceptado', 'true');
+        });
+    }
   }
 }

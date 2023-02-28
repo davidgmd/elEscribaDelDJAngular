@@ -2,7 +2,7 @@
   mat-flat-button
   color="primary"
   class="imagen"
-  (mouseenter)="reproducirSonido()"
+  (mouseenter)="reproducirSonido(audio)"
   [ngClass]="activo === ruta ? 'imagen--subrayada' : 'imagen'"
   (click)="navigateTo(ruta)"
 >
