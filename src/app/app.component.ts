@@ -1,8 +1,8 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { Title } from '@angular/platform-browser';
 import { LangChangeEvent, TranslateService } from '@ngx-translate/core';
 import { Subscription } from 'rxjs';
 import { ConfigService } from './core/services/config.service';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-root',
